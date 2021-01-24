@@ -23,4 +23,8 @@ public abstract class Password {
     public String getValue() {
         return value;
     }
+
+    public String getRegex() {
+        return regex;
+    }
 }
