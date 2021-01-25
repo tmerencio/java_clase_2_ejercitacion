@@ -12,12 +12,12 @@ public abstract class Password {
         this.regex = regex;
     }
 
-    public void setValue(String password) throws Exception {
+    public void setValue(String password) throws LaContraseniaNoCumpleException {
         if (password.matches(this.regex)){
             this.value = password;
         }
         // cambiar por Excepcion hecha por mi
-        else throw new Exception();
+        else throw new LaContraseniaNoCumpleException("La contraseña no cumple con los requisitos");
     }
 
     public String getValue() {
